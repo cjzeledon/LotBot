@@ -27,10 +27,9 @@ public class Lot {
      * to a random amount.
      * @return
      */
-
-    public static Lot createLot(){
+    public static Lot createLot() {
         Lot l = new Lot();
-        l.setId(NUM_CREATED);
+        l.setId(NUM_CREATED++);
         l.setSpaces(new Space[(int)(Math.random() * 50)]);
 
         return l;

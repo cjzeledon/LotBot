@@ -34,7 +34,7 @@ public class LotBotController {
         // we have to create lots of lots here
         // if you want fewer lots than 20
         // that's okay too
-        for (int i = 0;i < 20;i++) {
+        for (int i = 0;i < 30;i++) {
             lots.add(Lot.createLot());
         }
     }
