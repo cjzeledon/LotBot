@@ -39,13 +39,10 @@ public class LotBotController {
         }
     }
 
-    /*
-    GET /lots
-    Get a list of all lots in the system, including # of spots
-     */
+    //Get a list of all lots in the system, including # of spots
     @CrossOrigin
     @RequestMapping(path = "/lots", method = RequestMethod.GET)
-    public List<Lot> getLots(){
+    public List<Lot> getListofLots(){
         return lots;
     }
 
@@ -56,8 +53,8 @@ public class LotBotController {
     */
     @CrossOrigin
     @RequestMapping(path = "/lots/{id}", method = RequestMethod.GET)
-    public void getId(@PathVariable("id") int id){
-        lots.get(id);
+    public Lot getLotID(@PathVariable("id") int id){
+        return lots.get(id);
     }
 
     /*
@@ -66,9 +63,9 @@ public class LotBotController {
      */
     @CrossOrigin
     @RequestMapping(path = "/lots/{id}", method = RequestMethod.POST)
-    public void getId(@PathVariable("id") int id,
-                      @RequestBody Car car){
-        lots.get(id).getSpaces();
+    public void parkAVehicle (@PathVariable("id") int id,
+                             @RequestBody Vehicle car){
+        lots.get(id);
     }
 
     /*
