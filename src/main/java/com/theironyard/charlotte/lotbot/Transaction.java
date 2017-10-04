@@ -8,6 +8,15 @@ public class Transaction {
     private LocalDateTime checkOutDate;
     private double price;
 
+    // Use this method when parking a new car in a spot
+    public Transaction(Vehicle vehicle, LocalDateTime checkInDate) {
+        this.vehicle = vehicle;
+        this.checkInDate = checkInDate;
+    }
+
+    public Transaction() {
+    }
+
     public Vehicle getVehicle() {
         return vehicle;
     }
@@ -36,7 +45,12 @@ public class Transaction {
         return price;
     }
 
-    public void setPrice(double price) {
+    public double setPrice(double price) {
         this.price = price;
+        return price;
     }
+
+
+
+
 }
