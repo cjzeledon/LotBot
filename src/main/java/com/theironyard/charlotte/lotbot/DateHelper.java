@@ -15,6 +15,6 @@ public class DateHelper {
      */
 
     public static double getHoursBetweenDates(LocalDateTime start, LocalDateTime end){
-        return Duration.between(start, end).get(ChronoUnit.SECONDS) / 3600;
+        return Duration.between(start, end).get(ChronoUnit.SECONDS) / 3600.0;
     }
 }
